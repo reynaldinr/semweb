@@ -1,0 +1,2050 @@
+@prefix : <http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17> .
+
+<http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Medicine ;
+           rdfs:range :Apotek .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#produce
+:produce rdf:type owl:ObjectProperty ;
+         rdfs:domain :Pabrik ;
+         rdfs:range :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#producedBy
+:producedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Medicine ;
+            rdfs:range :Pabrik .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#searcing
+:searcing rdf:type owl:ObjectProperty ;
+          rdfs:domain :Customer ;
+          rdfs:range :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#sell
+:sell rdf:type owl:ObjectProperty ;
+      rdfs:domain :Apotek ;
+      rdfs:range :Medicine .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#alamat
+:alamat rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Apotek ,
+                    :Pabrik ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#bentuk
+:bentuk rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Medicine ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#harga
+:harga rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Medicine ;
+       rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#kandungan
+:kandungan rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Medicine ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#manfaat
+:manfaat rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Medicine ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#nama
+:nama rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Apotek ,
+                  :Apoteker ,
+                  :Customer ,
+                  :Medicine ,
+                  :Pabrik ,
+                  :Person ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#AntiNyeri
+:AntiNyeri rdf:type owl:Class ;
+           rdfs:subClassOf :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Antibiotik
+:Antibiotik rdf:type owl:Class ;
+            rdfs:subClassOf :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Apotek
+:Apotek rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Apoteker
+:Apoteker rdf:type owl:Class ;
+          rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#BatukFLu
+:BatukFLu rdf:type owl:Class ;
+          rdfs:subClassOf :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Customer
+:Customer rdf:type owl:Class ;
+          rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Demam
+:Demam rdf:type owl:Class ;
+       rdfs:subClassOf :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#LambungSaluranPencernaan
+:LambungSaluranPencernaan rdf:type owl:Class ;
+                          rdfs:subClassOf :Medicine .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Medicine
+:Medicine rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Pabrik
+:Pabrik rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#VitaminSuplemen
+:VitaminSuplemen rdf:type owl:Class ;
+                 rdfs:subClassOf :Medicine .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek01
+:apotek01 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+          :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "Jl. Terusan Buah Batu No.219"^^xsd:string ;
+          :nama "Apotek Kimia Farma Terusan Buah Batu"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek02
+:apotek02 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+          :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "Jl. Meteor Tengah IV No.124"^^xsd:string ;
+          :nama "Apotek Meteor"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek03
+:apotek03 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+            :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "J. Ciparago Gilang No.2"^^xsd:string ;
+          :nama "Apotek Sekarwangi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek04
+:apotek04 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+            :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "J. Raya Cibiru No.73"^^xsd:string ;
+          :nama "Apotek Cibiru"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek05
+:apotek05 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+            :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "Jl. A.H. Nasution Bunderan Cibiru No. 115"^^xsd:string ;
+          :nama "Apotek Al-Ma'soem"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek06
+:apotek06 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+            :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "Jl. Sadang No.5"^^xsd:string ;
+          :nama "Apotek Herbat Propolis"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#apotek07
+:apotek07 rdf:type owl:NamedIndividual ,
+                   :Apotek ;
+            :sell :medicine01 ,
+                :medicine02 ,
+                :medicine03 ,
+                :medicine04 ,
+                :medicine05 ,
+                :medicine06 ,
+                :medicine07 ,
+                :medicine08 ,
+                :medicine09 ,
+                :medicine10 ,
+                :medicine11 ,
+                :medicine12 ,
+                :medicine13 ,
+                :medicine14 ,
+                :medicine15 ,
+                :medicine16 ,
+                :medicine17 ,
+                :medicine18 ,
+                :medicine19 ,
+                :medicine20 ,
+                :medicine21 ,
+                :medicine22 ,
+                :medicine23 ,
+                :medicine24 ,
+                :medicine25 ,
+                :medicine26 ,
+                :medicine27 ,
+                :medicine28 ,
+                :medicine29 ,
+                :medicine30 ,
+                :medicine31 ,
+                :medicine32 ,
+                :medicine33 ,
+                :medicine34 ,
+                :medicine35 ,
+                :medicine36 ,
+                :medicine37 ,
+                :medicine38 ,
+                :medicine39 ,
+                :medicine40 ,
+                :medicine41 ,
+                :medicine42 ,
+                :medicine43 ,
+                :medicine44 ,
+                :medicine45 ,
+                :medicine46 ,
+                :medicine47 ,
+                :medicine48 ,
+                :medicine49 ,
+                :medicine50 ,
+                :medicine51 ,
+                :medicine52 ,
+                :medicine53 ,
+                :medicine54 ,
+                :medicine55 ,
+                :medicine56 ,
+                :medicine57 ,
+                :medicine58 ,
+                :medicine59 ,
+                :medicine60 ;
+          :alamat "J. Alun-alun Utara No.187"^^xsd:string ;
+          :nama "Apotek K-24 Ujung Berung"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine01
+:medicine01 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik01 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "12700"^^xsd:int ;
+            :kandungan "ambroxol 30 mg"^^xsd:string ;
+            :nama "Ambroxol 30mg"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine02
+:medicine02 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik02 ;
+            :bentuk "kapsul"^^xsd:string ;
+            :harga "50000"^^xsd:int ;
+            :kandungan """- Loratadine 5 mg
+- Pseudoephedrine HCI 120 mg"""^^xsd:string ;
+            :nama "Rhinos SR"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine03
+:medicine03 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik03 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "19700"^^xsd:int ;
+            :kandungan """- paracetamol 500 mg
+- phenylephrine HCL 5 mg
+- Dextromethorphan HBr 15 mg"""^^xsd:string ;
+            :nama "Panadol flu dan batuk"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine04
+:medicine04 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik04 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "20400"^^xsd:int ;
+            :kandungan """- Noscapine 10 mg
+- chlorpheniramine maleate 2 mg
+- glyceryl guaiacolate 50 mg
+- paracetamol 500 mg
+- phenylpropanolamine HCI 15 mg"""^^xsd:string ;
+            :nama "Paratusin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine05
+:medicine05 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik05 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "28100"^^xsd:int ;
+            :kandungan """- Dextromethorphan HBr 5 mg
+- Doksilamin suksinat 2 mg"""^^xsd:string ;
+            :nama "Vicks formula 44"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine06
+:medicine06 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "33000"^^xsd:int ;
+            :kandungan """- Pseudoephedrine HCI 60 mg
+- Triprolidine HCI 2.5 mg"""^^xsd:string ;
+            :nama "Tremenza"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine07
+:medicine07 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik07 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :kandungan """- Paracetamol 500 mg
+- phenylpropanolamine HCI 12.5 mg
+- chlorpheniramine maleate 2 mg
+- Dextromethorphan HBr 15 mg"""^^xsd:string ;
+            :nama "Alpara"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine08
+:medicine08 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik08 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "20900"^^xsd:int ;
+            :kandungan """- Succus liquiritiae extract 167 mg
+- ammonium chloride 50 mg
+- anise oil 0.99 mg
+- ammon liquid 7 microliter
+- menthol crystal 4.44 mg
+- peppermint oil 3.16 mg
+- alcohol 2%"""^^xsd:string ;
+            :nama "OBH Combi batuk berdahak menthol"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine09
+:medicine09 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik02 ;
+            :bentuk "sirup"^^xsd:string ;
+            :kandungan """- Pseudoephedrine HCI 15 mg
+- chlorpheniramine maleate 1 mg"""^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine10
+:medicine10 rdf:type owl:NamedIndividual ,
+                     :BatukFLu ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik09 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "11300"^^xsd:int ;
+            :kandungan """- phenylpropanolamine HCI 15 mg
+- Paracetamol 250 mg
+- Salicylamide 150 mg
+- Chlorpheniramine 2 mg"""^^xsd:string ;
+            :nama "Neozep forte"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine11
+:medicine11 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik10 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "7000"^^xsd:int ;
+            :kandungan "Paracetamol 500 mg"^^xsd:string ;
+            :nama "Paracetamol"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine12
+:medicine12 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik03 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "14700"^^xsd:int ;
+            :kandungan "Paracetamol 500 mg"^^xsd:string ;
+            :nama "Panadol"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine13
+:medicine13 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "22000"^^xsd:int ;
+            :kandungan "Paracetamol 120 mg"^^xsd:string ;
+            :nama "Sanmol"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine14
+:medicine14 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik11 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "11000"^^xsd:int ;
+            :kandungan "Paracetamol 500 mg"^^xsd:string ;
+            :nama "Dumin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine15
+:medicine15 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik12 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "5500"^^xsd:int ;
+            :kandungan "Paracetamol 500 mg"^^xsd:string ;
+            :nama "Sumagesic"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine16
+:medicine16 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik27 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "10500"^^xsd:int ;
+            :kandungan "Ibuprofen 400 mg"^^xsd:string ;
+            :nama "Ibuprofen"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine17
+:medicine17 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik13 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "42500"^^xsd:int ;
+            :kandungan "Ibuprofen 100 mg"^^xsd:string ;
+            :nama "Proris"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine18
+:medicine18 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik14 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "73700"^^xsd:int ;
+            :kandungan "Paracetamol 250 mg"^^xsd:string ;
+            :nama "Tempra Forte"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine19
+:medicine19 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik13 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "49700"^^xsd:int ;
+            :kandungan "Paracetamol Micronized 250 mg"^^xsd:string ;
+            :nama "Praxion Forte"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine20
+:medicine20 rdf:type owl:NamedIndividual ,
+                     :Demam ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik02 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "42400"^^xsd:int ;
+            :kandungan "Paracetamol 500 mg, N-Acetylcyteine 200 mg"^^xsd:string ;
+            :nama "Sistenol"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine21
+:medicine21 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik15 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "24200"^^xsd:int ;
+            :kandungan "Pirantel Pamoat 250 mg"^^xsd:string ;
+            :nama "Combantrin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine22
+:medicine22 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik16 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "38700"^^xsd:int ;
+            :kandungan """- Alumunium Hydroxide 200 mg
+- Magnesium Hydroxide 200 mg"""^^xsd:string ;
+            :nama "Antasida Doen"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine23
+:medicine23 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik17 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "115400"^^xsd:int ;
+            :kandungan "Sucralfate 500 mg"^^xsd:string ;
+            :nama "Inpepsa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine24
+:medicine24 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "49600"^^xsd:int ;
+            :kandungan """- Trisilicate 325 mg
+- AI(OH)3 Colloidal 325 mg
+- Simethicone 25 mg"""^^xsd:string ;
+            :nama "Sanmag"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine25
+:medicine25 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik18 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "19800"^^xsd:int ;
+            :kandungan """- Hydrotalcite 200 mg
+- Mg(OH)2 150 mg
+- Simethicone 50 mg"""^^xsd:string ;
+            :nama "Promag"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine26
+:medicine26 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik13 ;
+            :bentuk "gel"^^xsd:string ;
+            :harga "37400"^^xsd:int ;
+            :kandungan """- Na Lauryl Sulfoacetate 45 mg
+- Na Citrate 450 mg
+- Sorbic Acid 5 mg
+- Sorbitol 4.465 mg
+- PEg-400 625 mg"""^^xsd:string ;
+            :nama "Microlax Gel"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine27
+:medicine27 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik19 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "26800"^^xsd:int ;
+            :kandungan "Bisacodyl 5 mg"^^xsd:string ;
+            :nama "Dulcolax"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine28
+:medicine28 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik20 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "35500"^^xsd:int ;
+            :kandungan """- Hyocsine-N-Nutylbromide 10 mg
+- Paracetamol 500 mg"""^^xsd:string ;
+            :nama "Scopma Plus"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine29
+:medicine29 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik21 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "33000"^^xsd:int ;
+            :kandungan """- Magnesium Hydroxide 200 mg
+- Alumunium Hydroxide 200 mg
+- Simethicone 20 mg"""^^xsd:string ;
+            :nama "Mylanta"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine30
+:medicine30 rdf:type owl:NamedIndividual ,
+                     :LambungSaluranPencernaan ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik11 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "33000"^^xsd:int ;
+            :kandungan """- Karbon Aktivatus 125 mg
+- Excipients Ad 325 mg"""^^xsd:string ;
+            :nama "Norit"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine31
+:medicine31 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik22 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "92400"^^xsd:int ;
+            :kandungan """- Echinacea 250 mg
+- Picolinate 10 mg"""^^xsd:string ;
+            :nama "IMBoost"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine32
+:medicine32 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik02 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "12600"^^xsd:int ;
+            :kandungan """- Vitamin B1 100 mg
+- Vitamin B6 200 mg
+- Vitamin B12 200 mcg"""^^xsd:string ;
+            :nama "Neurodex"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine33
+:medicine33 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik02 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "59700"^^xsd:int ;
+            :kandungan """- Vitamin B1 100 mg
+- Vitamin B6 200 mg
+- Vitamin B12 500 mcg"""^^xsd:string ;
+            :nama "Neurobion Forte"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine34
+:medicine34 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik23 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "3000"^^xsd:int ;
+            :kandungan "Vitamin C"^^xsd:string ;
+            :nama "Vitacimin 500 MG Rasa Lemon"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine35
+:medicine35 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik22 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "18200"^^xsd:int ;
+            :kandungan "Serbuk akar Curcuma 200 mg"^^xsd:string ;
+            :nama "Curcuma FCT"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine36
+:medicine36 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik24 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "14900"^^xsd:int ;
+            :kandungan "Ester-C 320 mg"^^xsd:string ;
+            :nama "Holisticare Ester C"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine37
+:medicine37 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik25 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "23500"^^xsd:int ;
+            :kandungan """- Vitamin B1 100 mg
+- Vitamin B6 200 mg
+- Vitamin B12 200 mcg
+- Vitamin E 30 mg"""^^xsd:string ;
+            :nama "Lapibion"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine38
+:medicine38 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik25 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "56000"^^xsd:int ;
+            :kandungan """- Echinacea 500 mg
+- Zinc Picolinate 10 mg
+- Selenium 15 mcg
+- Ascorbic Acid 50 mg"""^^xsd:string ;
+            :nama "Imunos"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine39
+:medicine39 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik26 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "46200"^^xsd:int ;
+            :kandungan """- Kalsium
+- Vitamin D
+- Vitamin C
+- Vitamin B6"""^^xsd:string ;
+            :nama "Protecal Solid Effevercent Tube"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine40
+:medicine40 rdf:type owl:NamedIndividual ,
+                     :Medicine ,
+                     :VitaminSuplemen ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "19400"^^xsd:int ;
+            :kandungan """- Vitamin B1 100 mg
+- Vitamin B6 200 mg
+- Vitamin B12 200 mcg"""^^xsd:string ;
+            :nama "Neurosanbe Plus"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine41
+:medicine41 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik03 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "16200"^^xsd:int ;
+            :kandungan """- Paracetamol 500 mg
+- Caffeine 65 mg"""^^xsd:string ;
+            :nama "Panadol Extra"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine42
+:medicine42 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik27 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "42500"^^xsd:int ;
+            :kandungan "Asam Mefenamat 500 mg"^^xsd:string ;
+            :nama "Mefinal"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine43
+:medicine43 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "34800"^^xsd:int ;
+            :kandungan "Meloxicam 15 mg"^^xsd:string ;
+            :nama "Meloxicam"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine44
+:medicine44 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik18 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "16500"^^xsd:int ;
+            :kandungan """- Methampyrone 500 mg
+- Thiamine HCI 50 mg
+- Pyridoxine HCi 10 mg
+- Cyanocoalamin 10 mcg
+- Caffeine 50 mg"""^^xsd:string ;
+            :nama "Neuralgin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine45
+:medicine45 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik21 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "49700"^^xsd:int ;
+            :kandungan "Asam Mafenamat 500 mg"^^xsd:string ;
+            :nama "Ponstan"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine46
+:medicine46 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik27 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "11000"^^xsd:int ;
+            :kandungan "Ibuprofen 200 mg"^^xsd:string ;
+            :nama "Ibuprofen"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine47
+:medicine47 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik28 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "19800"^^xsd:int ;
+            :kandungan """- Caffeine 50 mg
+- Paracetamol 600 mg"""^^xsd:string ;
+            :nama "Bodrex"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine48
+:medicine48 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik26 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "9000"^^xsd:int ;
+            :kandungan """- Paracetamol 250 mg
+- Propypheanazone 150 mg
+- Caffeine 50 mg
+- Decchiorpheniramine maleate 1 mg"""^^xsd:string ;
+            :nama "Paramex"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine49
+:medicine49 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik02 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "11000"^^xsd:int ;
+            :kandungan "Natrium Diklofenak 50 mg"^^xsd:string ;
+            :nama "Voltadex"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine50
+:medicine50 rdf:type owl:NamedIndividual ,
+                     :AntiNyeri ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik26 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "6100"^^xsd:int ;
+            :kandungan """- Hyoscyamine 19 mg
+- Paracetamol 500 mg"""^^xsd:string ;
+            :nama "Feminax"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine51
+:medicine51 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik29 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "15000"^^xsd:int ;
+            :kandungan "Amoxcillin 500 mg"^^xsd:string ;
+            :nama "Amoxcillin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine52
+:medicine52 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "kapsul"^^xsd:string ;
+            :harga "143000"^^xsd:int ;
+            :kandungan "Cefradoxil Monohydrate 500 mg"^^xsd:string ;
+            :nama "Roksicap"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine53
+:medicine53 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "kapsul"^^xsd:string ;
+            :harga "192000"^^xsd:int ;
+            :kandungan "Cefadoxil 500 mg"^^xsd:string ;
+            :nama "Cefat"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine54
+:medicine54 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik18 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "96800"^^xsd:int ;
+            :kandungan """- Amoxcilin 500 mg
+- Clavulanic Acid 125 mg"""^^xsd:string ;
+            :nama "CO Amoxiclav"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine55
+:medicine55 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik30 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "11000"^^xsd:int ;
+            :kandungan """- Sulfametoksazol 400 mg
+- Trimetroprim 80 mg"""^^xsd:string ;
+            :nama "Cotrimoxazole"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine56
+:medicine56 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik31 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "19800"^^xsd:int ;
+            :kandungan "Amoxycilin Trihydrate 500 mg"^^xsd:string ;
+            :nama "Moxigra"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine57
+:medicine57 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "143200"^^xsd:int ;
+            :kandungan "Cefixime Trihydrate 10 mg"^^xsd:string ;
+            :nama "Sporetic"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine58
+:medicine58 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik32 ;
+            :bentuk "tablet"^^xsd:string ;
+            :harga "316600"^^xsd:int ;
+            :kandungan """- Metronidazole 500 mg
+- Nystatin 100.000 IU"""^^xsd:string ;
+            :nama "Flagystatin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine59
+:medicine59 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik20 ;
+            :bentuk "sirup"^^xsd:string ;
+            :harga "17300"^^xsd:int ;
+            :kandungan "Amoxcillin 125 mg"^^xsd:string ;
+            :nama "Yusimox"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#medicine60
+:medicine60 rdf:type owl:NamedIndividual ,
+                     :Antibiotik ,
+                     :Medicine ;
+            :locatedIn :apotek01 ,
+                       :apotek02 ,
+                       :apotek03 ,
+                       :apotek04 ,
+                       :apotek05 ,
+                       :apotek06 ,
+                       :apotek07 ;
+            :producedBy :pabrik06 ;
+            :bentuk "kaplet"^^xsd:string ;
+            :harga "277700"^^xsd:int ;
+            :kandungan "Ciprofloxacin 500 mg"^^xsd:string ;
+            :nama "Baquinor Forte"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik01
+:pabrik01 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine01 ;
+          :alamat "Jl. Raya Pelabuhan Km. 18, Cikembar, Cikembar, Sukabumi, Jawa Barat 43161, Indonesia"^^xsd:string ;
+          :nama "Mersifarma"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik02
+:pabrik02 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine02 ,
+                   :medicine09 ,
+                   :medicine20 ,
+                   :medicine32 ,
+                   :medicine33 ,
+                   :medicine49 ;
+          :alamat "Jl. Ciborete No.45, Mengger, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40267"^^xsd:string ;
+          :nama "Dexa Medica"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik03
+:pabrik03 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine03 ,
+                   :medicine12 ,
+                   :medicine41 ;
+          :alamat "Grahaha Paramitha 5th Floor Jl. Denpasar Raya D2 Jakarta"^^xsd:string ;
+          :nama "Glaxo Smithkline"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik04
+:pabrik04 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine04 ;
+          :alamat "Graha Darya Varia Jl. Melawai Raya No. 93, Kel Kramat Pela - Kec Kebayoran Baru, Jakarta Selatan,12130"^^xsd:string ;
+          :nama "Prafa"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik05
+:pabrik05 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine05 ;
+          :alamat "Jl. Harapan II Lot KK-7A & KK-7B, Kawasan Industri KIIC, Sirnabaya, Telukjambe Timur, Karawang 41361"^^xsd:string ;
+          :nama "Procter & Gamble"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik06
+:pabrik06 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine06 ,
+                   :medicine13 ,
+                   :medicine24 ,
+                   :medicine40 ,
+                   :medicine43 ,
+                   :medicine52 ,
+                   :medicine53 ,
+                   :medicine57 ,
+                   :medicine60 ;
+          :alamat "Jl. Industri I No. 9 , Desa Utama, Leuwigajah, Cimindi CIMAHI 40552"^^xsd:string ;
+          :nama "Sanbe Farma"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik07
+:pabrik07 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine07 ;
+          :alamat "Jl. Ir. H. Juanda No. 5C, Gedung Sinar Asri JAKARTA 10120 Jl. Raya Serang Km 11.5 Desa Bunder Cikupa TANGERANG 15170"^^xsd:string ;
+          :nama "Molex ayus"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik08
+:pabrik08 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine08 ;
+          :alamat "Jl. Raya Simpang, 383, Padalarang, Bandung, Indonesia"^^xsd:string ;
+          :nama "Combiphar"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik09
+:pabrik09 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine10 ;
+          :alamat "South Quarter, Tower C, 18th -19th Floor Jl. R.A. Kartini, Kav.8 Jakarta 12430, Indonesia"^^xsd:string ;
+          :nama "Darya Varia"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik10
+:pabrik10 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine11 ;
+          :alamat "Jl. HR Moch. Mangundiprojo No.1, Buduran Sidoarjo."^^xsd:string ;
+          :nama "Interbat"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik11
+:pabrik11 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine14 ,
+                   :medicine30 ;
+          :alamat "Jl. Raya Jakarta-Bogor No.KM. 28, RT.6/RW.7, Pekayon, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13710"^^xsd:string ;
+          :nama "Actavis"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik12
+:pabrik12 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine15 ;
+          :alamat "Jl. Raya Jakarta-Bogor No.KM. 33, Curug, Kec. Cimanggis, Kota Depok, Jawa Barat 16453"^^xsd:string ;
+          :nama "Mediafarma"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik13
+:pabrik13 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine17 ,
+                   :medicine19 ,
+                   :medicine26 ;
+          :alamat "Jl. Limo 40 , Permata Hijau Rt 08/10 Senayan, Kel. Grogol Selatan - Kec Kebayoran Lama"^^xsd:string ;
+          :nama "Pharos"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik14
+:pabrik14 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine18 ;
+          :alamat "Jl. Raya Jakarta-Bogor No.KM, Cilangkap, Kec. Tapos, Kota Depok, Jawa Barat 16958"^^xsd:string ;
+          :nama "Taisho Pharmaceutical"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik15
+:pabrik15 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine21 ;
+          :alamat "Gedung K-Link Tower LT 12, Jl Gatot Subroto Kav 59 A Setia Budi Jakarta Selatan"^^xsd:string ;
+          :nama "Johnson & Johnson"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik16
+:pabrik16 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine22 ;
+          :alamat ""^^xsd:string ,
+                  "Jl. Murbei No 2 Semarang, Jawa Tengah"^^xsd:string ;
+          :nama "Erela"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik17
+:pabrik17 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine23 ;
+          :alamat "Jl. Industri VI No. 1, Desa Pasir Jaya, Kec. Jatiuwung, Pasir Jaya, Tangerang, Kota Tangerang, Banten 15135, Indonesia"^^xsd:string ;
+          :nama "Fahrenheit"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik18
+:pabrik18 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine25 ,
+                   :medicine44 ,
+                   :medicine54 ;
+          :alamat "Jl. Let. Jend Suprapto Kav 4 Jakarta 10510 - Indonesia"^^xsd:string ;
+          :nama "Kalbe Farma"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik19
+:pabrik19 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine27 ;
+          :alamat "AIA Central Level 40 Jl. Jend. Sudirman Kav. 48A Jakarta 12930"^^xsd:string ;
+          :nama "Boehringer Ingelheim"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik20
+:pabrik20 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine28 ,
+                   :medicine59 ;
+          :alamat "Jl. Solo - Sragen No.KM. 14.9, Waru, Pulosari, Kec. Kebakkramat, Kabupaten Karanganyar, Jawa Tengah 57762"^^xsd:string ;
+          :nama "Ifars"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik21
+:pabrik21 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine29 ,
+                   :medicine45 ;
+          :alamat "JI. Raya Bogor Km. 28 Jakarta 13710,PO Box 2706 Jakarta 10027"^^xsd:string ;
+          :nama "Pfizer"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik22
+:pabrik22 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine31 ,
+                   :medicine35 ;
+          :alamat "Jl. Gatot Subroto VI C/2. Denpasar"^^xsd:string ;
+          :nama "Soho"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik23
+:pabrik23 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine34 ;
+          :alamat "Jl. Cihampelas No.21, Tamansari, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40171"^^xsd:string ;
+          :nama "Takeda Indonesia"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik24
+:pabrik24 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine36 ;
+          :alamat "RT.16/RW.7, Meruya Utara, Kec. Kembangan, DKI Jakarta, Daerah Khusus Ibukota Jakarta 11620"^^xsd:string ;
+          :nama "Indocare Citrapasific"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik25
+:pabrik25 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine37 ,
+                   :medicine38 ;
+          :alamat "Jl. Surapati No.149, Sadang Serang, Kec. Coblong, Kota Bandung, Jawa Barat 40133"^^xsd:string ;
+          :nama "Lapi Laboratories"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik26
+:pabrik26 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine39 ,
+                   :medicine48 ,
+                   :medicine50 ;
+          :alamat "Desa Sanggrahan, Grogol Sukoharjo"^^xsd:string ;
+          :nama "Konimex"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik27
+:pabrik27 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine16 ,
+                   :medicine42 ,
+                   :medicine46 ;
+          :alamat "Jl. Raya Kepatihan No.112, Guntung, Kepatihan, Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174"^^xsd:string ;
+          :nama "Novapharin"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik28
+:pabrik28 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine47 ;
+          :alamat "East Jakarta Industrial Park Plot 1H Lemah Abang CIKARANG BEKASI 17550"^^xsd:string ;
+          :nama "Tempo Scan Pacific"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik29
+:pabrik29 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine51 ;
+          :alamat "Jl. Johar, Kawasan Industri Lippo Delta silicon 3, Cikarang, Cilamaya Wetan, Cicau, Karawang, Bekasi, Jawa Barat 17530"^^xsd:string ;
+          :nama "Tigaka Distrindo"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik30
+:pabrik30 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine55 ;
+          :alamat "Kemandoran 8 no 16. Jakarta 12210 - Indonesia"^^xsd:string ;
+          :nama "Pyridam"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik31
+:pabrik31 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine56 ;
+          :alamat "Jl. Dr. Radjiman 296. Solo 57141. Central Java, Indonesia"^^xsd:string ;
+          :nama "Graha Farma"^^xsd:string .
+
+
+###  http://www.semanticweb.org/yana/ontologies/2019/4/untitled-ontology-17#pabrik32
+:pabrik32 rdf:type owl:NamedIndividual ,
+                   :Pabrik ;
+          :produce :medicine58 ;
+          :alamat "JL. Jend. A. Yani, Pulo Mas, Jakarta, 13210, RT.4/RW.9, Kayu Putih, RT.4/RW.9, Kayu Putih, Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13210"^^xsd:string ;
+          :nama "Avrntis Pharma"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
